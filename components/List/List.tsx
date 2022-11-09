@@ -1,16 +1,25 @@
 import { Text, View } from "../Themed";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import { Divider, Spinner } from "native-base";
 import { fetchAllCharacters } from "../../api/RickApi";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { RootStackScreenProps } from "../../types";
+import { useNavigation } from "@react-navigation/native";
 
-const Item = ({ title }: any) => (
+const Item = ({ title, id, navigation }: any) => (
   <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("Details", { id: id });
+      }}
+    >
+      <Text style={styles.title}>{title}</Text>
+    </TouchableOpacity>
   </View>
 );
 
 const List = () => {
+  const navigation = useNavigation();
   const {
     data,
     isLoading,
@@ -32,7 +41,9 @@ const List = () => {
     }
   );
 
-  const renderItem = ({ item }: any) => <Item title={item.name} />;
+  const renderItem = ({ item }: any) => (
+    <Item navigation={navigation} title={item.name} id={item.id} />
+  );
 
   const itemExtractorKey = (item: any, index: number) => {
     return index.toString();
