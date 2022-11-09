@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import List from "../components/List/List";
 
 import EditScreenInfo from "../components/_EditScreenInfo";
 import { Text, View } from "../components/Themed";
@@ -8,14 +9,8 @@ export default function TabOneScreen({
   navigation,
 }: RootTabScreenProps<"TabOne">) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+    <View>
+      <List />
     </View>
   );
 }
