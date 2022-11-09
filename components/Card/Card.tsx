@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { Text, View } from "../Themed";
-import { Image } from "react-native";
+/* eslint-disable react/react-in-jsx-scope */
+import { StyleSheet, Image } from 'react-native';
+import { Text, View } from '../Themed';
 
 const Card = ({ character }: any) => {
   return (

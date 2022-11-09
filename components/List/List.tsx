@@ -1,16 +1,16 @@
-import { Text, View } from "../Themed";
-import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
-import { Divider, Spinner } from "native-base";
-import { fetchAllCharacters } from "../../api/RickApi";
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { RootStackScreenProps } from "../../types";
-import { useNavigation } from "@react-navigation/native";
+/* eslint-disable react/react-in-jsx-scope */
+import { Text, View } from '../Themed';
+import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { Divider, Spinner } from 'native-base';
+import { fetchAllCharacters } from '../../api/RickApi';
+import { useInfiniteQuery } from '@tanstack/react-query';
+import { useNavigation } from '@react-navigation/native';
 
 const Item = ({ title, id, navigation }: any) => (
   <View style={styles.item}>
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate("Details", { id: id });
+        navigation.navigate('Details', { id });
       }}
     >
       <Text style={styles.title}>{title}</Text>
@@ -27,8 +27,8 @@ const List = () => {
     fetchNextPage,
     isFetchingNextPage,
   }: any = useInfiniteQuery(
-    ["characters"],
-    ({ pageParam }) => fetchAllCharacters({ pageParam }),
+    ['characters'],
+    async ({ pageParam }) => await fetchAllCharacters({ pageParam }),
 
     {
       getNextPageParam: (lastPage) => {
@@ -56,12 +56,12 @@ const List = () => {
   };
 
   const renderSpinner = () => {
-    return <Spinner size="lg" />;
+    return <Spinner size='lg' />;
   };
 
   return isLoading ? (
     <View style={styles.container}>
-      <Spinner size="lg" />
+      <Spinner size='lg' />
     </View>
   ) : (
     <View>
@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   item: {
     padding: 20,
