@@ -23,11 +23,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   item: {
-    padding: 20,
+    padding: 10,
     marginVertical: 8,
     marginHorizontal: 16,
   },
   title: {
-    fontSize: 32,
+    fontSize: 24,
+  },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
   },
 });

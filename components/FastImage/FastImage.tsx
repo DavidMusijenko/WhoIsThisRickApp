@@ -1,14 +1,15 @@
-/* eslint-disable react/react-in-jsx-scope */
-import { Text, View } from '../Themed';
-import { FlatList, StyleSheet } from 'react-native';
-import { Divider, Spinner } from 'native-base';
-import { fetchAllCharacters } from '../../api/RickApi';
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { StyleSheet, FlatList } from 'react-native';
+import { View, Text } from '../Themed';
 import { useNavigation } from '@react-navigation/native';
-import { Item } from './Item/Item';
+import { useInfiniteQuery } from '@tanstack/react-query';
+import { fetchAllCharacters } from '../../api/RickApi';
+import { Spinner } from 'native-base';
+import { ImageEl } from './ImageEl/ImageEl';
+import { Dimensions } from 'react-native';
 
-const List = () => {
+const FastImage = () => {
   const navigation = useNavigation();
+  const windowWidth = Dimensions.get('window').width;
   const {
     data,
     isLoading,
@@ -30,8 +31,16 @@ const List = () => {
     }
   );
 
+  console.log(data);
+
   const renderItem = ({ item }: any) => (
-    <Item navigation={navigation} title={item.name} id={item.id} />
+    <ImageEl
+      navigation={navigation}
+      image={item.image}
+      id={item.id}
+      name={item.name}
+      windowWidth={windowWidth}
+    />
   );
 
   const itemExtractorKey = (item: any, index: number) => {
@@ -61,28 +70,19 @@ const List = () => {
         onEndReached={loadMore}
         onEndReachedThreshold={0.3}
         ListFooterComponent={isFetchingNextPage ? renderSpinner : null}
+        numColumns={3}
       />
     </View>
   );
 };
 
+export default FastImage;
+
 const styles = StyleSheet.create({
-  header: {
-    fontSize: 30,
-  },
   container: {
+    marginTop: 50,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  item: {
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 32,
-  },
 });
-
-export default List;
