@@ -1,7 +1,7 @@
-import { useQuery, useInfiniteQuery } from "@tanstack/react-query";
+import { useQuery, useInfiniteQuery } from '@tanstack/react-query';
 
 export const fetchAllCharacters = ({
-  pageParam = "https://rickandmortyapi.com/api/character?page=1",
+  pageParam = 'https://rickandmortyapi.com/api/character?page=1',
 }) => {
   return fetch(pageParam)
     .then((response) => {
@@ -23,5 +23,5 @@ export const fetchCharacter = ({ id }: { id: number }) => {
 };
 
 export const useFetchCharacterQuery = (id: number) => {
-  return useQuery(["character", id], () => fetchCharacter({ id }));
+  return useQuery(['character', id], () => fetchCharacter({ id }));
 };

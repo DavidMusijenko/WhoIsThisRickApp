@@ -5,18 +5,7 @@ import { Divider, Spinner } from 'native-base';
 import { fetchAllCharacters } from '../../api/RickApi';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useNavigation } from '@react-navigation/native';
-
-const Item = ({ title, id, navigation }: any) => (
-  <View style={styles.item}>
-    <TouchableOpacity
-      onPress={() => {
-        navigation.navigate('Details', { id });
-      }}
-    >
-      <Text style={styles.title}>{title}</Text>
-    </TouchableOpacity>
-  </View>
-);
+import { Item } from './Item/Item';
 
 const List = () => {
   const navigation = useNavigation();
@@ -65,8 +54,6 @@ const List = () => {
     </View>
   ) : (
     <View>
-      <Text style={styles.header}>List</Text>
-      <Divider />
       <FlatList
         data={data?.pages?.map((page: any) => page.results).flat()}
         renderItem={renderItem}
