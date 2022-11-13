@@ -46,12 +46,12 @@ const List = () => {
   };
 
   const renderSpinner = () => {
-    return <Spinner size='lg' />;
+    return <Spinner size='lg' padding='20' />;
   };
 
   return isLoading ? (
     <View style={styles.container}>
-      <Spinner size='lg' />
+      <Spinner size='lg' padding='20' />
     </View>
   ) : (
     <View>
