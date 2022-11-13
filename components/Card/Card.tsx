@@ -2,8 +2,9 @@
 import { StyleSheet, Image } from 'react-native';
 import { Text, View } from '../Themed';
 import { Dimensions } from 'react-native';
+import { character } from '../../types';
 
-const Card = ({ character }: any) => {
+const Card = ({ character }: { character: character }) => {
   const windowWidth = Dimensions.get('window').width;
   return (
     <View style={styles.container}>

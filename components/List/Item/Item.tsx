@@ -1,7 +1,16 @@
 import { View, Text } from '../../Themed';
 import { TouchableOpacity, StyleSheet } from 'react-native';
+import { character } from '../../../types';
 
-export const Item = ({ title, id, navigation }: any) => (
+export const Item = ({
+  title,
+  id,
+  navigation,
+}: {
+  title: string;
+  id: number;
+  navigation: any;
+}) => (
   <View style={styles.item}>
     <TouchableOpacity
       onPress={() => {

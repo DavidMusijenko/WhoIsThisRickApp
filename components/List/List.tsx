@@ -6,6 +6,7 @@ import { fetchAllCharacters } from '../../api/RickApi';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useNavigation } from '@react-navigation/native';
 import { Item } from './Item/Item';
+import { character } from '../../types';
 
 const List = () => {
   const navigation = useNavigation();
@@ -30,11 +31,11 @@ const List = () => {
     }
   );
 
-  const renderItem = ({ item }: any) => (
+  const renderItem = ({ item }: { item: character }) => (
     <Item navigation={navigation} title={item.name} id={item.id} />
   );
 
-  const itemExtractorKey = (item: any, index: number) => {
+  const itemExtractorKey = (item: character, index: number) => {
     return index.toString();
   };
 

@@ -6,6 +6,7 @@ import { fetchAllCharacters } from '../../api/RickApi';
 import { Spinner } from 'native-base';
 import { ImageEl } from './ImageEl/ImageEl';
 import { Dimensions } from 'react-native';
+import { character } from '../../types';
 
 const FastImage = () => {
   const navigation = useNavigation();
@@ -33,7 +34,7 @@ const FastImage = () => {
 
   console.log(data);
 
-  const renderItem = ({ item }: any) => (
+  const renderItem = ({ item }: { item: character }) => (
     <ImageEl
       navigation={navigation}
       image={item.image}
@@ -43,7 +44,7 @@ const FastImage = () => {
     />
   );
 
-  const itemExtractorKey = (item: any, index: number) => {
+  const itemExtractorKey = (item: character, index: number) => {
     return index.toString();
   };
 
