@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`has a description prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "height": 750,
+        "width": 750,
+      }
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 40,
+          "padding": 30,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+     
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eee",
+        },
+        Object {
+          "height": 1,
+          "marginVertical": 30,
+          "width": "80%",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  >
+     Last known location: 
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`has a image prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "height": 750,
+        "width": 750,
+      }
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 40,
+          "padding": 30,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+     
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eee",
+        },
+        Object {
+          "height": 1,
+          "marginVertical": 30,
+          "width": "80%",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  >
+     Last known location: 
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`has a title prop 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "height": 750,
+        "width": 750,
+      }
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 40,
+          "padding": 30,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+     
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eee",
+        },
+        Object {
+          "height": 1,
+          "marginVertical": 30,
+          "width": "80%",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  >
+     Last known location: 
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": undefined,
+      }
+    }
+    style={
+      Object {
+        "height": 750,
+        "width": 750,
+      }
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 40,
+          "padding": 30,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+     
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eee",
+        },
+        Object {
+          "height": 1,
+          "marginVertical": 30,
+          "width": "80%",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  >
+     Last known location: 
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+        },
+        Object {
+          "fontSize": 24,
+          "padding": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;
